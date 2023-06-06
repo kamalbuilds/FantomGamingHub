@@ -33,6 +33,9 @@ export function Navbar() {
             <Link href="/rent" className={styles.link}>
               Rent
             </Link>
+            <Link href="/tokenbalances" className={styles.link}>
+              Balances
+            </Link>
           </div>
         </div>
 
