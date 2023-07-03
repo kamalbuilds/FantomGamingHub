@@ -12,12 +12,13 @@ export default function Component() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-  const [propertyType, setPropertyType] = useState("");
-  const [buildingStyle, setBuildingStyle] = useState("");
-  const [rooms, setRooms] = useState("");
-  const [bathrooms, setBathrooms] = useState("");
-  const [surface, setSurface] = useState("");
-  const [yearOfConstruction, setYearOfConstruction] = useState("");
+  const [gameTitle, setGameTitle] = useState("");
+  const [genre, setGenre] = useState("");
+  const [platform, setPlatform] = useState("");
+  const [rarity, setRarity] = useState("");
+  const [level, setLevel] = useState("");
+  const [experiencePoints, setExperiencePoints] = useState("");
+  
 
   const address = useAddress();
 
@@ -31,12 +32,12 @@ export default function Component() {
       description,
       image,
       attributes: [
-        { trait_type: "Property Type", value: propertyType },
-        { trait_type: "Building Style", value: buildingStyle },
-        { trait_type: "Rooms", value: rooms },
-        { trait_type: "Bathrooms", value: bathrooms },
-        { trait_type: "Surface", value: surface },
-        { trait_type: "Year of Construction", value: yearOfConstruction },
+        { trait_type: "Game Title", value: gameTitle },
+        { trait_type: "Genre", value: genre },
+        { trait_type: "Platform", value: platform },
+        { trait_type: "Rarity", value: rarity },
+        { trait_type: "Level", value: level },
+        { trait_type: "Experience Points", value: experiencePoints },
       ],
     };
 
@@ -57,7 +58,7 @@ export default function Component() {
   return (
     <Container maxWidth="lg">
       <Toaster position="bottom-center" reverseOrder={false} />
-      <h1>Tokenize your Property as a NFT</h1>
+      <h1>Tokenize your Gaming Asset as an NFT</h1>
       <form className="space-y-4 my-4">
         <div className="mb-4">
           <label className="block mb-2">
@@ -94,70 +95,71 @@ export default function Component() {
         </div>
         <div className="mb-4">
           <label className="block mb-2">
-            Property Type:
+            Game Title:
             <input
               type="text"
-              value={propertyType}
-              onChange={(e) => setPropertyType(e.target.value)}
+              value={gameTitle}
+              onChange={(e) => setGameTitle(e.target.value)}
               className="w-full border border-gray-400 rounded px-2 py-1"
             />
           </label>
         </div>
         <div className="mb-4">
           <label className="block mb-2">
-            Building Style:
+            Genre:
             <input
               type="text"
-              value={buildingStyle}
-              onChange={(e) => setBuildingStyle(e.target.value)}
+              value={genre}
+              onChange={(e) => setGenre(e.target.value)}
               className="w-full border border-gray-400 rounded px-2 py-1"
             />
           </label>
         </div>
         <div className="mb-4">
           <label className="block mb-2">
-            Rooms:
+            Platform:
             <input
               type="text"
-              value={rooms}
-              onChange={(e) => setRooms(e.target.value)}
+              value={platform}
+              onChange={(e) => setPlatform(e.target.value)}
               className="w-full border border-gray-400 rounded px-2 py-1"
             />
           </label>
         </div>
         <div className="mb-4">
           <label className="block mb-2">
-            Bathrooms:
+            Rarity:
             <input
               type="text"
-              value={bathrooms}
-              onChange={(e) => setBathrooms(e.target.value)}
+              value={rarity}
+              onChange={(e) => setRarity(e.target.value)}
               className="w-full border border-gray-400 rounded px-2 py-1"
             />
           </label>
         </div>
         <div className="mb-4">
           <label className="block mb-2">
-            Surface:
+            Level:
             <input
               type="text"
-              value={surface}
-              onChange={(e) => setSurface(e.target.value)}
+              value={level}
+              onChange={(e) => setLevel(e.target.value)}
               className="w-full border border-gray-400 rounded px-2 py-1"
             />
           </label>
         </div>
         <div className="mb-4">
           <label className="block mb-2">
-            Year of Construction:
+            Experience Points:
             <input
               type="text"
-              value={yearOfConstruction}
-              onChange={(e) => setYearOfConstruction(e.target.value)}
+              value={experiencePoints}
+              onChange={(e) => setExperiencePoints(e.target.value)}
               className="w-full border border-gray-400 rounded px-2 py-1"
             />
           </label>
         </div>
+
       </form>
       <div className="flex justify-center">
         <button disabled={isLoading} onClick={handleMint} className="text-center border-4 border-sky-500 p-2">

@@ -4,7 +4,7 @@ import { Navbar } from "../components/Navbar/Navbar";
 import NextNProgress from "nextjs-progressbar";
 import { NETWORK } from "../const/contractAddresses";
 import "../styles/globals.css";
-import {  FantomMainnet , FantomTestnet} from "@thirdweb-dev/chains";
+import {  FantomTestnet , Fantom } from "@thirdweb-dev/chains";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

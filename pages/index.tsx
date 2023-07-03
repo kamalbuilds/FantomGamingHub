@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                 <br />
               </h1>
               <h2>
-                Trade Unique Gaming NFTs on Fantom's Premier Marketplace 🌐
+                Trade Unique Gaming NFTs on Fantom s Premier Marketplace 🌐
               </h2>
               <br />
             </div>
